@@ -11,13 +11,22 @@ int main(){
     int n;
     printf("Enter number of processes: ");
     scanf("%d", &n);
-    int process[n][4], global_time, loc=0, i, found=0, choice, temp1=0, temp2=0;
+    int process[n][4], global_time, loc=0, i, found=0, temp1=0, temp2=0;
     float priority[n]; 
     printf("Enter burst time and arrival time for each process (in same order). Format: int int\n");
     for(i=0; i<n;i++){
         printf("process %d: ", i+1);
+        here:
         scanf("%d %d", &process[i][0], &process[i][1]);
         process[i][2] = 0;
+        if (process[i][0] < 0){
+            printf("\nnegative values not allowed\n");
+            goto here;
+        }
+        if (process[i][1]< 0){
+            printf("\nnegative values not allowed\n");
+            goto here;
+        }
         if (i==0){
             global_time = process[i][1];
         } else
