@@ -5,6 +5,7 @@
 int main(){
     // burst, arrival, flag, waiting
     int num_test, mode;
+    printf("Enter number of batches: ");
     scanf("%d", &num_test);
     for(int j=0;j<num_test;j++)
     {system("clear");
