@@ -30,7 +30,7 @@ int main(){
 
     }
     system("clear");
-    printf("\nTest Case %d\n\npro\tbt\tat\twt\ttat\n", j+1);
+    printf("\nTest Case %d\n\n%-10s\t%-10s\t%-10s\t%-10s\t%-10s\n", j+1,"pord","bt","at","wt","tat");
     while (1){
         found = 0;
         for(i=0;i<n;i++){
@@ -77,7 +77,7 @@ int main(){
         }else if (found == 0){
             break;
         } else if(found == 2) {
-            printf("p%d\t%d\t%d\t%d\t%d\n", loc + 1, process[loc][0],process[loc][1],process[loc][3],process[loc][0]+process[loc][3]);
+            printf("p%d\t%10d\t%10d\t%10d\t%10d\n", loc + 1, process[loc][0],process[loc][1],process[loc][3],process[loc][0]+process[loc][3]);
             global_time += process[loc][0];
             process[loc][2] = 1;
             priority[loc] = -100000000.0;
